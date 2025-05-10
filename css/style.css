@@ -3,7 +3,7 @@
     src: url('../assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900; /* 可调节的字体粗细范围 */
     font-style: normal;
-  }
+}
   
 body {
     margin: 0;
@@ -33,9 +33,17 @@ main {
     box-shadow: 3px 3px black;
 }
 
+@media(min-width: 400px) {
+    .card {
+        max-width: 360px;
+    }
+}
+
 img {
+    display: block;
     width: 100%;
     border-radius: 0.3em;
+    object-fit: cover;
 }
 
 .button{
@@ -57,6 +65,11 @@ img {
 .card h1 {
     margin: 0.2em 0;
     font-weight: 1000;
+}
+
+.card h1:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
 }
 
 .profile {
